@@ -82,7 +82,6 @@ Now that you accessed the running container:
 ````bash
 conda run -n base jupyter-lab --no-browser --ip=0.0.0.0 --port=8888 --allow-root
 ````
-Now open your favourite browser, go to http://localhost:8888/
-Insert password 'jovyan' to access the notebook
+Now open your favourite browser, go to http://localhost:8888/ and insert password 'jovyan' to access the notebook
 ## The cell that creates the sparkSession generates some warnings
 It is due to the way the python kernel access the sparkSession. It will not influence the way you work
