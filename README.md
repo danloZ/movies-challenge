@@ -68,12 +68,6 @@ In order to test the data loaded on postgres, we can compare the data coming fro
 I noticed that most of rows with invalid records had in common invalid id and imdb_id values so I chose to filter these records out since they wouldn't bring added value to the final top100 list. Furthermore, I added a new column, called 'note', that reports a message whenever there is an invalid record on the corresponding row. It turned out to be useful to select "clean" rows.
 
 # Troubleshooting
-## I cannot build the image from Dockerfile
-You can load the image from the file image/jupyter-app_v1.0.tar
-````bash
-docker image load -i image/jupyter-app_v1.0.tar
-````
-If you already pulled the postgres image, proceed with docker-compose command that you find in /installation/deploy_solution.sh
 ## jupyterlab does not run when I deploy the container
 Open terminal
 ````bash
