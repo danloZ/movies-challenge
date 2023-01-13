@@ -22,6 +22,22 @@ sh ./installation/deploy_solution.sh
 - Insert password 'jovyan' to access the notebook
 - Run the entire notebook and enjoy!
 
+# Run Postgres client from the docker container
+Open bash terminal and run 
+````bash
+docker exec -it postgres-db /bin/bash
+````
+Now that you accessed the running container, run the client
+````bash
+psql -U postgres
+````
+Run sample queries like the following:
+````bash
+CREATE DATABASE movies;
+\c movies
+SELECT * FROM Top100byRatio;
+````
+
 # Install Postgres client [optional]
 Open terminal and run 
 ````bash
@@ -31,12 +47,8 @@ Open terminal and run client:
 ````bash
 psql -h localhost -p 5432 -U postgres -W postgres
 ````
-Run sample queries like the following:
-````bash
-CREATE DATABASE movies;
-\c movies
-SELECT * FROM Top100byRatio;
-````
+Run sample queries like the previous case
+
 # How to run the script
 As mentioned in the installation description, the script is implemented on a notebook running in jupyterlab environment. The environment includes:
 - Python 3.10.8
