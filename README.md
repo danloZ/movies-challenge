@@ -18,8 +18,7 @@ Deploy docker containers via this command:
 sh ./installation/deploy_solution.sh
 ````
 
-Now open your favourite browser, go to http://localhost:8888/
-Insert password 'jovyan' to access the notebook
-
-Now run the entire notebook and enjoy!
+- Now open your favourite browser, go to http://localhost:8888/
+- Insert password 'jovyan' to access the notebook
+- Run the entire notebook and enjoy!
 
