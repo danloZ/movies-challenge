@@ -63,7 +63,7 @@ I preferred the containerized solution over the standalone one because I was dri
 My choice of using Spark enables this script to be easily scalable by  changing the cluster configuration (spark.conf) from local (now) to client/cluster mode. In order to be scalable, it would need the addition of further containers to have more workers, but also more machines, to scale horizontally. The choice of local cluster deployment is due to the need of shared filesystem required to run workers on multiple containers: this configuration would have made the deployment process more tricky since it needs to mount local filesystem to directories inside the containers. 
 
 # Test
-In order to test the data loaded on postgres, we can compare the data coming from top100byRatio table to the data from parquet file. All columns of movies_metadata.csv are cast to ensure the quality of data. 
+The script is implemented on notebook and this approach gives visibility of dataframe content at each step. In order to test the data loaded on postgres, we can compare the data coming from top100byRatio table to the data from parquet file. All columns of movies_metadata.csv are cast to ensure the quality of data. 
 
 I noticed that most of rows with invalid records had in common invalid id and imdb_id values so I chose to filter these records out since they wouldn't bring added value to the final top100 list. Furthermore, I added a new column, called 'note', that reports a message whenever there is an invalid record on the corresponding row. It turned out to be useful to select "clean" rows.
 
