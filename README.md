@@ -22,3 +22,18 @@ sh ./installation/deploy_solution.sh
 - Insert password 'jovyan' to access the notebook
 - Run the entire notebook and enjoy!
 
+# Install Postgres client [optional]
+Open terminal and run 
+````bash
+sudo apt install postgresql-client
+````
+Open terminal and run client:
+````bash
+psql -h localhost -p 5432 -U postgres -W postgres
+````
+Run sample queries like the following:
+````bash
+CREATE DATABASE movies;
+\c movies
+SELECT * FROM Top100byRatio;
+````
