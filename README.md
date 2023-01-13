@@ -57,6 +57,7 @@ You can do one-shot run of entire notebook by clicking the fast-forward button o
 The main script is implemented with Pyspark, reading/writing from parquet,csv,xml and postgres using the connectors provided. In this way we keep the same implementation of script regardless of the data structures of the variuos sources.
 In the case of postgres, I have used the pythonic library psycopg2 to create the database, then I wanted to leave an example of query that can be done with pandas, that can be easily converted to Spark Dataframe.
 
+I preferred the containerized solution over the standalone one because I was driven by the need for an easy deploy of solution with its prepackaged environment and easy handling of files, other than the flexibility to configure the environment.
 My choice of using Spark enables this script to be easily scalable by  changing the cluster configuration (spark.conf) from local (now) to client/cluster mode. The choice of local cluster deployment is due to the need of shared filesystem required to run workers on multiple containers: this configuration would have made the deployment process more tricky since it needs to mount local filesystem to directories inside the containers. 
 
 # Test
