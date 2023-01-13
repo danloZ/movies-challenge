@@ -67,6 +67,12 @@ My choice of using Spark enables this script to be easily scalable by  changing 
 In order to test the data loaded on postgres, we can compare the data coming from top100byRatio table to the data from parquet file
 
 # Troubleshooting
+## I cannot build the image from Dockerfile
+You can load the image from the file in /image folder
+````bash
+docker load -i jupyter-app_v1.0.tar
+````
+If you already pulled the postgres image, proceed with docker-compose command that you find in /installation/deploy_solution.sh
 ## jupyterlab does not run when I deploy the container
 Open terminal
 ````bash
