@@ -68,9 +68,9 @@ In order to test the data loaded on postgres, we can compare the data coming fro
 
 # Troubleshooting
 ## I cannot build the image from Dockerfile
-You can load the image from the file in /image folder
+You can load the image from the file image/jupyter-app_v1.0.tar
 ````bash
-docker image load -i jupyter-app_v1.0.tar
+docker image load -i image/jupyter-app_v1.0.tar
 ````
 If you already pulled the postgres image, proceed with docker-compose command that you find in /installation/deploy_solution.sh
 ## jupyterlab does not run when I deploy the container
