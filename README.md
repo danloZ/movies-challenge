@@ -14,7 +14,7 @@ Deploy docker containers via this command:
 bash ./installation/deploy_solution.sh
 ````
 
-- Now open your favourite browser, go to http://localhost:8888/
+- Now open your favourite browser, go to http://localhost:8888/ (http://localhost:4040/ for Spark UI)
 - Insert password 'jovyan' to access the notebook
 - Run the entire notebook and enjoy!
 
