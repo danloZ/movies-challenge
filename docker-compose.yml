@@ -1,0 +1,60 @@
+version: '3'
+
+###############################################################################
+#DOCKER-COMPOSE 
+###############################################################################
+# Docker-compose creates a network that. All the other docker images join this networ, forming a cluster #########
+# Network name will same as the parent direcotry name #########
+############################################################################
+ 
+#---------------------------------------
+# MASTER CONFIGURATION 
+#---------------------------------------
+ 
+services:
+  jupyter-app:
+    build: .
+    image: jupyter-app:v1.0
+    container_name: jupyter-app
+    ports:
+      - 4040:4040
+      - 7077:7077
+      - 8080:8080
+      - 8888:8888
+    command: ["jupyter-lab", "--port", "8888", "--ip", "0.0.0.0", "--no-browser", "--allow-root"]
+#    command: ["/usr/bin/supervisord", "--configuration=/opt/conf/master.conf"]
+#    volumes:
+#      - storage/jupyter:/opt/storage/jupyter
+
+  postgres:
+    build: .
+    image: postgres:15.1
+    container_name: postgres-db
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+#    command: ["/usr/bin/supervisord", "--configuration=/opt/conf/master.conf"]
+#    volumes:
+#      - storage/postgres:/opt/storage/postgres
+ 
+##---------------------------------------
+## SLAVE CONFIGURATION 
+##---------------------------------------
+#  slave:
+#    image: danok/spark_image:v0.3.1
+#    deploy:
+#      mode: replicated
+#      replicas: 2
+#    depends_on:
+#      - master
+#    ports:
+#      - "8081"
+#    command: ["/usr/bin/supervisord", "--configuration=/opt/conf/slave.conf"]
+#    volumes:
+#        - ../docker-volume/spark-output/:/opt/output
+#        - ../docker-volume/spark-events/:/opt/spark-events
+#        - ../docker-volume/spark-storage/:/opt/storage
+#
