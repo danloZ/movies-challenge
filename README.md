@@ -16,6 +16,7 @@ bash ./installation/deploy_solution.sh
 
 - Now open your favourite browser, go to http://localhost:8888/ (Spark UI: http://localhost:4040/)
 - Insert password 'jovyan' to access the notebook
+- Open notebook work/film_stats.ypnb
 - Run the entire notebook and enjoy!
 
 # Run Postgres client from the docker container [optional]
