@@ -4,3 +4,4 @@ ipython-sql==0.4.1
 sqlalchemy==1.4.25
 psycopg2-binary==2.9.5
 pgspecial==2.0.1
+findspark==2.0.1
