@@ -47,12 +47,13 @@ psql -h localhost -p 5432 -U postgres -W postgres
 Run sample queries like the previous case
 
 # How to run the script
-As mentioned in the installation description, the script is implemented on a notebook running in jupyterlab environment. The environment includes:
+As mentioned in the installation description, the script is implemented on a notebook running in jupyterlab environment. This environment is customized by me, starting by the Dockerfile to the functionalities inside jupyterlab. The environment includes:
 - Python 3.9.7
 - Pyspark 3.1.2
 - Additional jars to use Spark JDBC Connector for Postgres and Spark Connector for XML: find all jars in /jars folder
 - Pandas
 - Psycopg2 for pythonic Postgres client
+- Magic commands to query Postgres
 
 You can do one-shot run of entire notebook by clicking the fast-forward button on the control bar.
 The main script is implemented with Pyspark, reading/writing from parquet,csv,xml and postgres using the connectors provided. In this way we keep the same implementation of script regardless of the data structures of the variuos sources.
