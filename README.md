@@ -22,7 +22,7 @@ sh ./installation/deploy_solution.sh
 - Insert password 'jovyan' to access the notebook
 - Run the entire notebook and enjoy!
 
-# Run Postgres client from the docker container
+# Run Postgres client from the docker container [optional]
 Open bash terminal and run 
 ````bash
 docker exec -it postgres-db /bin/bash
