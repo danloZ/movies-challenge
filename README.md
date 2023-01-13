@@ -47,7 +47,7 @@ Run sample queries like the previous case
 
 # How to run the script
 As mentioned in the installation description, the script is implemented on a notebook running in jupyterlab environment. The environment includes:
-- Python 3.10.8
+- Python 3.9.7
 - Pyspark 3.1.2
 - Additional jars to use Spark JDBC Connector for Postgres and Spark Connector for XML: find all jars in /jars folder
 - Pandas
