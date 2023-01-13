@@ -1,14 +1,20 @@
 # Prerequisites
 - Docker engine
+- Docker-compose
 
 # Installation
 
-Download Rancher desktop
-https://docs.rancherdesktop.io/getting-started/installation/
+This solution runs on Docker platform. To make the installation process as smooth as possible, you will need to make it run through one of following tools:
+- Rancher Desktop: an open-source desktop application that enables Docker containers management on top of kubernetes clusters. Docker-compose plugin is bundled; Download Rancher desktop from here and follow installation guide https://docs.rancherdesktop.io/getting-started/installation/
+- Docker engine + Docker-compose: essential and lightweight solution; run the following command
+sh ./installation/installation.sh
 
-docker pull postgres:15.1
+Now that you've set up the docker platform, you just need to deploy the containers.
+Deploy docker containers via this command:
+sh ./installation/deploy_solution.sh
 
-docker pull jupyter/pyspark-notebook:python-3.10.8
+Now open your favourite browser, go to http://localhost:8888/
+Insert password 'jovyan' to access the notebook
 
-cd <repo-directory-path>
-docker build -f Dockerfile-jupyter -t jupyter-app:v1.0 .
+Now run the entire notebook and enjoy!
+
