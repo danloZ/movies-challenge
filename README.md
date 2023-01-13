@@ -11,7 +11,7 @@ This solution runs on Docker platform. To make the installation process as smoot
 Now that you've set up the docker platform, you just need to deploy the containers.
 Deploy docker containers via this command:
 ````bash
-sh ./installation/deploy_solution.sh
+bash ./installation/deploy_solution.sh
 ````
 
 - Now open your favourite browser, go to http://localhost:8888/
