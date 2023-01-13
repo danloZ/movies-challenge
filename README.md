@@ -67,3 +67,16 @@ My choice of using Spark enables this script to be easily scalable by  changing 
 In order to test the data loaded on postgres, we can compare the data coming from top100byRatio table to the data from parquet file
 
 # Troubleshooting
+## jupyterlab does not run when I deploy the container
+Open terminal
+````bash
+docker exec -it jupyter-app /bin/bash
+````
+Now that you accessed the running container: 
+````bash
+conda run -n base jupyter-lab --no-browser --ip=0.0.0.0 --port=8888 --allow-root
+````
+Now open your favourite browser, go to http://localhost:8888/
+Insert password 'jovyan' to access the notebook
+## The cell that creates the sparkSession generates some warnings
+It is due to the way the python kernel access the sparkSession. It will not influence the way you work
