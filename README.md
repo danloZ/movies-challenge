@@ -1,7 +1,10 @@
 # Prerequisites
-
+- Docker engine
 
 # Installation
+
+Download Rancher desktop
+https://docs.rancherdesktop.io/getting-started/installation/
 
 docker pull postgres:15.1
 
