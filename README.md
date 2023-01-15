@@ -5,7 +5,7 @@
 # Installation
 
 This solution runs on Docker platform. To make the installation process as smooth as possible, you will need to make it run through one of following tools:
-- Docker engine + Docker-compose: essential and lightweight solution; you can follow the installation guide for [docker engine](https://docs.docker.com/engine/install/)and for [docker-compose](https://docs.docker.com/compose/install/)
+- Docker engine + Docker-compose: essential and lightweight solution; you can follow the installation guide for [docker engine](https://docs.docker.com/engine/install/) and for [docker-compose](https://docs.docker.com/compose/install/)
 - Rancher Desktop: an open-source desktop application that enables Docker containers management on top of kubernetes clusters. Docker-compose plugin is bundled; it does not need any purchasable license for use (that may happen if you use Docker Desktop).Download Rancher desktop from here and follow [installation guide](https://docs.rancherdesktop.io/getting-started/installation/). Be careful, you should choose the CLI called Moby (dockerd) in roder to deploy containers and run the script
 
 Now that you've set up the docker platform, you just need to deploy the containers.
